@@ -9,7 +9,7 @@ import { useCart } from "@/data/useCartStore";
 import EmptyCartItem from "./emptyCartItem";
 
 // Import the 'product' type
-import { product } from "../../../types/products"; // Adjust the import path based on where your 'product' type is defined
+ // Adjust the import path based on where your 'product' type is defined
 
 const CartPage = () => {
   const { cart } = useCart(); // Assuming cart is an array of items of type 'product & { amount: number }'

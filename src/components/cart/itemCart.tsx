@@ -2,6 +2,7 @@ import React from "react";
 import { useCart } from "@/data/useCartStore";
 import { XCircle } from "lucide-react";
 import { product } from "../../../types/products"; // Import your product type
+import Image from "next/image";
 
 interface CartItemProps {
   product: product & { amount: number }; // Use the product type and add 'amount' to it
@@ -16,7 +17,7 @@ const CartItem = ({ product }: CartItemProps) => {
   return (
     <div className="flex items-center w-full justify-between mt-4">
       {/* Display product image */}
-      <img
+      <Image
         src={product.image?._ref || ""} // Check if product image exists, otherwise use an empty string
         alt={product.name}
         width={100}

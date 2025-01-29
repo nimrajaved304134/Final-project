@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { useCart } from "@/data/useCartStore";
 import CartItem from "./cartItem";
 import { MdClose } from "react-icons/md";

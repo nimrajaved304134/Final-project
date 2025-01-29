@@ -9,19 +9,16 @@ import { notFound } from "next/navigation";
 
 // Query to fetch products by category
 const categoryQuery = groq`*[_type == "product" && category->name == $category]{
-  _id,
-  name,
-  price,
-  description,
-  image,
-  slug,
-  "categoryName": category->name
-}`;
+    _id,
+    name,
+    price,
+    description,
+    image,
+    slug,
+    "categoryName": category->name
+  }`;
 
 // Query to fetch all categories for static params
-const categoriesQuery = groq`*[_type == "category"]{
-  name
-}`;
 
 type Props = {
   params: { category: string }

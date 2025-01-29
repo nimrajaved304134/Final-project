@@ -3,6 +3,7 @@ import { useCart } from "@/data/useCartStore";
 import { Trash2 } from "lucide-react";
 import { urlFor } from "@/sanity/lib/image";
 import { product } from "../../../types/products";
+import Image from "next/image";
 
 interface CartItemProps {
   item: product & { amount: number };
@@ -37,7 +38,7 @@ const CartItem = ({ item }: CartItemProps) => {
       <div className="flex items-center space-x-4">
         <div className="w-16 h-16 relative overflow-hidden rounded-md bg-gray-100">
           {item.image ? (
-            <img
+            <Image
               src={imageUrl}
               alt={item.name}
               className="object-cover w-full h-full"

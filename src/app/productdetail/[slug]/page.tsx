@@ -1,8 +1,7 @@
-
-
+/* eslint-disable @next/next/no-img-element */
 import { Metadata } from "next";
 import { productdetail } from "../../../../types/products";
-import  client  from "@/sanity/lib/client";
+import client from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { groq } from "next-sanity";
 import Image from "next/image";
@@ -16,10 +15,18 @@ type Props = {
   };
 };
 
+// Add type for slug response
+type SlugResponse = {
+  slug: {
+    current: string;
+  };
+};
+
 // Query to fetch a single product by slug
 const query = groq`*[_type == "product" && slug.current == $slug][0]`;
 
 // Generate metadata for SEO
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product: productdetail = await client.fetch(query, { slug: params.slug });
   
@@ -36,6 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 // Generate static params for all products
+
 export async function generateStaticParams() {
   const query = groq`*[_type == "product"]{
     slug {
@@ -43,14 +51,15 @@ export async function generateStaticParams() {
     }
   }`;
   
-  const slugs = await client.fetch(query);
+  const slugs: SlugResponse[] = await client.fetch(query);
   
-  return slugs.map((slug: any) => ({
-    slug: slug.slug.current,
+  return slugs.map((item) => ({
+    slug: item.slug.current,
   }));
 }
 
 // Page component
+
 export default async function ProductDetailPage({ params: { slug } }: Props) {
   const product: productdetail = await client.fetch(query, { slug });
 
