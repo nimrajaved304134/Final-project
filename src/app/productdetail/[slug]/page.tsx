@@ -70,7 +70,7 @@ export default async function ProductDetailPage({ params: { slug } }: Props) {
   }
 
   return (
-    <main className="">
+    <main className="w-screen overflow-hidden">
       <div className="grid md:grid-cols-2 gap-8">
         {/* Product Image */}
         <div className="relative aspect-square">

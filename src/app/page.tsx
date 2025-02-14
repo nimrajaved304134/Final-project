@@ -7,7 +7,7 @@ import FourProductCard from '../components/productpage/forproductcard'
 
 const Page = () => {
   return (
-    <div>
+    <div className='overflow-hidden w-screeen max-w-screen'>
       <Hero/>
       <Whatmakesbranddifferent/>
       <FourProductCard/>

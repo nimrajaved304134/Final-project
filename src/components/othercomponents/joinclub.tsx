@@ -4,7 +4,7 @@ import { Button } from '../ui/button'
 
 const Joinclub = () => {
   return (
-    <div className='bg-[#F9F9F9] w-screen md:h-[481px] h-[381px] md:py-[52px] py-[42px]'>
+    <div className='bg-red-500 w-screen max-w-screen overflow-x-hidden md:h-[481px] h-[381px] md:py-[52px] py-[42px] overflow-hidden'>
         <div className='flex flex-col md:mx-[96px] mx-[40px] h-[300px] bg-white items-center justify-center md:h-[364px] md:gap-[16px]'>
         <h1 className='text-center text-[18px] leading-[24px] md:text-[36px] md:leading-[50.4px] font-normal'>Join the club and get the benefits</h1>
         <p className='text-center text-[12px] leading-[18px] md:text-[16px] md:leading-[24px] font-normal'>Sign up for our newsletter and receive exclusive offers on new <br/>

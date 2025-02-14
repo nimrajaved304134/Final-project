@@ -46,7 +46,7 @@ const FourProductCard: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="w-screen">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[48px] mx-[86px] mt-20">
         {currentItems.map((product) => (
           <div

@@ -7,7 +7,7 @@ import React from 'react'
 
 const Aboutus = () => {
   return (
-    <div>
+    <div className='w-screen overflow-hidden'>
         <Abouthero/>
         <Smallidea/>
         <Whatmakesbranddifferent/>

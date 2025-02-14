@@ -5,7 +5,7 @@ import himage from '../../../public/asset/c1.svg'
 
 const Hero = () => {
   return (
-    <main className="w-full lg:flex-row md:h-[584px] h-fit  bg-slate-200 mx-auto md:flex sm:flex-col">
+    <main className=" lg:flex-row md:h-[584px] h-fit  bg-slate-200  md:flex sm:flex-col justify-center overflow-y-hidden w-screen max-w-full min-w-full overflow-x-hidden">
       {/* content Div */}
 
       <div className="md:h-[584px] lg:w-[calc(100%-520px)] bg-[#2A254B] md:flex md:flex-col md:justify-around items-start lg:pt-10 px-5 md:p-10 xl:p-0">
@@ -39,7 +39,7 @@ const Hero = () => {
       </div>
 
       {/* Image Div */}
-      <div className="xl:w-[520px] md:w-auto hidden lg:h-[584px] lg:block overflow-hidden">
+      <div className="w-1/2 md:w-auto hidden lg:h-[584px] lg:block overflow-y-hidden">
         <Image
           src={himage}
           alt="RightImage"

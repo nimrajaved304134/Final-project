@@ -4,7 +4,7 @@ import smallidea from '../../../public/asset/smallidea.svg'
 
 const Smallidea= () => {
   return (
-    <div className="flex flex-col md:flex-row w-full gap-4 h-auto md:h-[558px] items-center justify-around px-4 md:py-16 py-4 ">
+    <div className="flex flex-col md:flex-row w-screen gap-4 h-auto md:h-[558px] items-center justify-center px-4 md:py-16 py-4 ">
     <div className="bg-custom-purple md:h-[478px] w-full md:w-1/2 text-white p-8 lg:pt-[64px] md:px-[32] lg:px-[64px] mb-8 md:mb-0 bg-[#2A254B] transition-transform duration-300 ease-in-out hover:scale-95">
       <h1 className="text-xl md:text-2xl clashDisplay">
         It started with a small idea

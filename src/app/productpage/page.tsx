@@ -5,7 +5,7 @@ import React from 'react'
 
 const Productpage = () => {
   return (
-    <div>
+    <div className='w-screen overflow-hidden max-w-screen'>
         <ProductCard/>
         <Whatmakesbranddifferent/>
         <Joinclub/>

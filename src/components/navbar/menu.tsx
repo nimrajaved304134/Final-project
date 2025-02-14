@@ -20,7 +20,7 @@ const Menu = () => {
       {/* Menu items */}
       {open && (
         <div
-          className="text-white bg-gradient-to-bl from-blue-600 to-red-600 absolute left-0 top-20 h-[calc(100vh-6rem)] flex flex-col gap-8 items-center justify-center w-full text-3xl z-10"
+          className="text-white bg-darkprimary absolute left-0 top-16 h-[calc(100vh-6rem)] flex flex-col gap-8 items-center justify-center w-full text-3xl z-10"
           aria-hidden={!open}
         >
           <Link href={"/"} className="hover:text-blue-600" onClick={() => setOpen(false)}>

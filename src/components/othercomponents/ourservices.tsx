@@ -4,7 +4,7 @@ import pic from '../../../public/asset/intouch.svg'
 
 const Ourservices = () => {
   return (
-    <div className="flex flex-col md:flex-row w-full h-auto items-center px-4 py-4">
+    <div className="flex flex-col md:flex-row w-screen h-auto items-center px-4 py-4 overflow-hidden">
 <Image
   height={603}
   width={720}
@@ -12,7 +12,7 @@ const Ourservices = () => {
   alt="Service"
   className="lg:h-[603px] md:h-[490px] w-full md:w-1/2 transition-transform duration-300 ease-in-out hover:scale-95 hover:translate-y-1"
 />
-<div className="border-2 border-none lg:h-[603px] md:h-[490px] w-full  md:w-1/2 p-8 xl:px-20 lg:py-[74px] ">
+<div className=" border-none lg:h-[603px] md:h-[490px] w-full  md:w-1/2 p-8  lg:py-[74px] ">
   <h1 className="text-xl md:text-2xl text-darkprimary clashDisplay ">
     Our service isn&lsquo;t just personal, it&lsquo;s actually
     hyper-personally exquisite

@@ -46,12 +46,12 @@ export default async function CategoryPage({ params }: Props) {
   }
 
   return (
-    <main className="px-8">
+    <main className="w-screen justify-center items-center overflow-hidden">
       <h1 className="text-3xl font-bold mb-8 text-center capitalize">
         {category}
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-6">
         {products.map((product) => (
           <div key={product._id} className="flex flex-col gap-4">
             <Link href={`/productdetail/${product.slug.current}`}>
