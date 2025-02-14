@@ -71,7 +71,7 @@ const ProductCard: React.FC = () => {
             </Link>
             <Button
               onClick={() => handleAddToCart(product)}
-              className="py-2 px-4 rounded-lg bg-yellow-500 text-white hover:bg-yellow-600 transition-colors"
+              className="py-2 px-4 rounded-lg text-white bg-darkprimary hover:text-darkprimary hover:bg-white transition-colors"
             >
               Add to Cart
             </Button>

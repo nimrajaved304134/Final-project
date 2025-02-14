@@ -1,7 +1,7 @@
 import React from "react";
-import { useCart } from "@/data/useCartStore";
+import { useCart } from "../../data/useCartStore";
 import { Trash2 } from "lucide-react";
-import { urlFor } from "@/sanity/lib/image";
+import { urlFor } from "../../sanity/lib/image";
 import { product } from "../../../types/products";
 import Image from "next/image";
 
@@ -41,11 +41,14 @@ const CartItem = ({ item }: CartItemProps) => {
             <Image
               src={imageUrl}
               alt={item.name}
+              width={200}
+              height={200}
               className="object-cover w-full h-full"
               onError={(e) => {
                 console.log('Image load error');
                 const target = e.target as HTMLImageElement;
                 target.src = "/api/placeholder/100/100";
+
               }}
             />
           ) : (

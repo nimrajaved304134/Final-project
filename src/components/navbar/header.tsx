@@ -35,6 +35,9 @@ const Header = () => {
             </Link>
           </li>
         ))}
+        <li>
+          <Link href={'/aboutus'}> Aboutus </Link>
+        </li>
       </ul>
     </div>
   );

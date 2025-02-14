@@ -5,8 +5,10 @@ import client from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { groq } from "next-sanity";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../../components/ui/button";
 import { notFound } from "next/navigation";
+import Whatmakesbranddifferent from "../../../components/othercomponents/whatmakesbranddifferent";
+import Joinclub from "../../../components/othercomponents/joinclub";
 
 // Types for generateMetadata and page props
 type Props = {
@@ -68,7 +70,7 @@ export default async function ProductDetailPage({ params: { slug } }: Props) {
   }
 
   return (
-    <main className="container mx-auto px-4 py-8">
+    <main className="">
       <div className="grid md:grid-cols-2 gap-8">
         {/* Product Image */}
         <div className="relative aspect-square">
@@ -123,6 +125,8 @@ export default async function ProductDetailPage({ params: { slug } }: Props) {
           </Button>
         </div>
       </div>
+      <Whatmakesbranddifferent/>
+      <Joinclub/>
     </main>
   );
 }

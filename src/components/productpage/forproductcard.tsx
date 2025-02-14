@@ -10,7 +10,7 @@ import { useCart } from "@/data/useCartStore";
 import CartPopup from "../cart/cartPopUp";
 import { four } from "@/sanity/lib/queries";
 
-const ProductCard: React.FC = () => {
+const FourProductCard: React.FC = () => {
   const [products, setProducts] = useState<productdetail[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -29,6 +29,7 @@ const ProductCard: React.FC = () => {
     // Scroll to top when page changes
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
 
   useEffect(() => {
     async function fetchProducts() {
@@ -71,7 +72,7 @@ const ProductCard: React.FC = () => {
             </Link>
             <Button
               onClick={() => handleAddToCart(product)}
-              className="py-2 px-4 rounded-lg bg-yellow-500 text-white hover:bg-yellow-600 transition-colors"
+              className="py-2 px-4 rounded-lg text-white bg-darkprimary hover:text-darkprimary hover:bg-whitetransition-colors"
             >
               Add to Cart
             </Button>
@@ -79,23 +80,12 @@ const ProductCard: React.FC = () => {
         ))}
       </div>
 
-      {/* Pagination controls */}
-      <div className="flex justify-center mt-8">
-        <Button
-          onClick={() => paginate(currentPage - 1)}
-          disabled={currentPage === 1}
-          className="px-4 py-2 bg-gray-300 text-black rounded-md mr-2"
-        >
-          Previous
-        </Button>
-        <Button
-          onClick={() => paginate(currentPage + 1)}
-          disabled={indexOfLastItem >= products.length}
-          className="px-4 py-2 bg-gray-300 text-black rounded-md"
-        >
-          Next
-        </Button>
-      </div>
+    <div className="justify-center items-center m-4 text-center">
+      <Link href={'/productpage'}>
+      <Button className="h-[50px] w-[200px] text-white bg-darkprimary hover:text-darkprimary hover:bg-white" > view collection</Button>
+      </Link>
+    </div>
+
       {isCartOpen && (
         <CartPopup 
           closeFunction={() => setIsCartOpen(false)} 
@@ -105,4 +95,4 @@ const ProductCard: React.FC = () => {
   );
 };
 
-export default ProductCard;
+export default FourProductCard;

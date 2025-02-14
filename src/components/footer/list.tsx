@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 const List = () => {
@@ -6,15 +7,23 @@ const List = () => {
 
             <div className="w-auto px-4 flex flex-col gap-[12px]">
               <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">Menu</h2>
+             
               <nav className="list-none mb-10 flex flex-col gap-[12px]">
+                
                 {["New arrivals", "Best sellers", "Recently viewed", "Popular this week", "All products"].map(
                   (item, index) => (
+                  
                     <li key={index}>
+                     
                       <a className="hover:text-gray-400 text-white">{item}</a>
+                 
                     </li>
+                    
                   )
                 )}
+               
               </nav>
+              
             </div>
 
             <div className="w-auto px-4 flex flex-col gap-[12px]">

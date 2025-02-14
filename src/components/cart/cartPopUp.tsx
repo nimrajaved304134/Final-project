@@ -4,6 +4,7 @@ import { useCart } from "@/data/useCartStore";
 import CartItem from "./cartItem";
 import { MdClose } from "react-icons/md";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const CartPopup = ({ closeFunction }: { closeFunction: () => void }) => {
   const { cart } = useCart();
@@ -45,7 +46,9 @@ const CartPopup = ({ closeFunction }: { closeFunction: () => void }) => {
             onClick={closeFunction} 
             className="flex-1 bg-gray-300 text-black hover:bg-gray-400"
           >
+            <Link href={'/cart'}>
             View Cart
+            </Link>
           </Button>
           <Button 
             className="flex-1 bg-green-500 text-white hover:bg-green-600"

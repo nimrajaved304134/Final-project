@@ -6,6 +6,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { productdetail } from "../../../../types/products";
 import { notFound } from "next/navigation";
+import Whatmakesbranddifferent from "../../../components/othercomponents/whatmakesbranddifferent";
+import Joinclub from "../../../components/othercomponents/joinclub";
+
+
+
 
 // Query to fetch products by category
 const categoryQuery = groq`*[_type == "product" && category->name == $category]{
@@ -41,7 +46,7 @@ export default async function CategoryPage({ params }: Props) {
   }
 
   return (
-    <main className="container mx-auto px-4 py-8 h-screen">
+    <main className="px-8">
       <h1 className="text-3xl font-bold mb-8 text-center capitalize">
         {category}
       </h1>
@@ -66,10 +71,16 @@ export default async function CategoryPage({ params }: Props) {
                 <p className="text-gray-600">${product.price}</p>
               </div>
             </Link>
-            <Button className="mt-auto">Add to Cart</Button>
+                     <Button>
+                        
+                         Add to Cart
+                      </Button>
           </div>
         ))}
       </div>
+      <Whatmakesbranddifferent/>
+      <Joinclub/>
+    
     </main>
   );
 }
